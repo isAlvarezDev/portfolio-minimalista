@@ -73,7 +73,6 @@ a {
     display: grid;
     grid-template-columns: repeat(1, minmax(12.5rem, 1fr));
     grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
     align-content: center;
     gap: 5.5rem;
     max-width: 1250px;
@@ -177,6 +176,7 @@ span:hover {
 
     .portfolio__project {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 5rem;
     }
@@ -200,12 +200,30 @@ span:hover {
         font-size: clamp(.5rem, .7rem, 1rem);
     }
 
+    .portfolio {
+        height: auto;
+        gap: 0;
+    }
+
+    .portfolio__project {
+        gap: 0;
+        padding-bottom: 0;
+    }
+
     .material-symbols-outlined {
         font-size: 12px !important;
     }
 
     .main__picture img {
         width: clamp(1rem, 6.1rem, 8rem);
+    }
+
+    .portfolio__project-picture {
+        height: auto;
+    }
+
+    .portfolio__project-picture img {
+        object-fit: contain;
     }
 }
 
